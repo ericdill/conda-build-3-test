@@ -1,0 +1,18 @@
+recipe_path: /home/ericdill/dev/conda-forge/feedstocks/feedstocks/swagger-spec-validator/recipeTraceback (most recent call last):
+  File "build-feedstocks.py", line 39, in build
+    api.build(recipe_path)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/api.py", line 183, in build
+    need_source_download=need_source_download, config=config, variants=variants)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/build.py", line 1615, in build_tree
+    built_packages=built_packages,
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/build.py", line 966, in build
+    try_download(m, no_download_source=False)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/render.py", line 356, in try_download
+    source.provide(metadata)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/source.py", line 594, in provide
+    timeout=metadata.config.timeout, locking=metadata.config.locking)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/source.py", line 107, in unpack
+    src_path = download_to_cache(cache_folder, recipe_path, source_dict)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/source.py", line 85, in download_to_cache
+    (tp.upper(), hashed, expected_hash))
+RuntimeError: SHA256 mismatch: '05d7d9d19692377fc0a699d8797466e6284b966f6f3316fc38a815fffcc14416' != 'bf3a816e3f44edca2e30ed3af68826e84037ed69d2e985406ba3a5a9e0c0b3a0'

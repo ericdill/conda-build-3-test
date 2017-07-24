@@ -1,0 +1,24 @@
+recipe_path: /home/ericdill/dev/conda-forge/feedstocks/feedstocks/certifi/recipeTraceback (most recent call last):
+  File "build-feedstocks.py", line 39, in build
+    api.build(recipe_path)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/api.py", line 183, in build
+    need_source_download=need_source_download, config=config, variants=variants)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/build.py", line 1615, in build_tree
+    built_packages=built_packages,
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/build.py", line 999, in build
+    output_metas = expand_outputs([(m, need_source_download, need_reparse_in_env)])
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/render.py", line 500, in expand_outputs
+    for (output_dict, m) in _m.get_output_metadata_set(permit_unsatisfiable_variants=False):
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/metadata.py", line 1632, in get_output_metadata_set
+    permit_unsatisfiable_variants=permit_unsatisfiable_variants)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/metadata.py", line 622, in finalize_outputs_pass
+    fm = finalize_metadata(om, permit_unsatisfiable_variants=permit_unsatisfiable_variants)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/render.py", line 336, in finalize_metadata
+    rendered_metadata.meta['build']['string'] = rendered_metadata.build_id()
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/metadata.py", line 1081, in build_id
+    out = build_string_from_metadata(self)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/metadata.py", line 452, in build_string_from_metadata
+    build_pkg_names = [ms.name for ms in metadata.ms_depends(build_or_host)]
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/metadata.py", line 962, in ms_depends
+    raise RuntimeError("%s cannot depend on itself" % self.name())
+RuntimeError: certifi cannot depend on itself

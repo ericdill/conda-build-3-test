@@ -1,0 +1,25 @@
+recipe_path: /home/ericdill/dev/conda-forge/feedstocks/feedstocks/cis/recipeTraceback (most recent call last):
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/build.py", line 1487, in test
+    utils.check_call_env(cmd, env=env, cwd=metadata.config.test_dir)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/utils.py", line 670, in check_call_env
+    return _func_defaulting_env_to_os_environ(subprocess.check_call, *popenargs, **kwargs)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/utils.py", line 666, in _func_defaulting_env_to_os_environ
+    return func(_args, **kwargs)
+  File "/home/ericdill/miniconda/lib/python3.6/subprocess.py", line 291, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['/bin/bash', '-x', '-e', '/home/ericdill/miniconda/conda-bld/cis_1500233774136/test_tmp/conda_test_runner.sh']' returned non-zero exit status 1.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "build-feedstocks.py", line 39, in build
+    api.build(recipe_path)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/api.py", line 183, in build
+    need_source_download=need_source_download, config=config, variants=variants)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/build.py", line 1622, in build_tree
+    test(pkg, config=metadata.config)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/build.py", line 1490, in test
+    config=metadata.config)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/build.py", line 1517, in tests_failed
+    sys.exit("TESTS FAILED: " + os.path.basename(pkg))
+SystemExit: TESTS FAILED: cis-1.5.4-py36hb5bac10_0.tar.bz2

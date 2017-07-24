@@ -1,0 +1,6 @@
+recipe_path: /home/ericdill/dev/conda-forge/feedstocks/feedstocks/errTraceback (most recent call last):
+  File "build-feedstocks.py", line 39, in build
+    api.build(recipe_path)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/api.py", line 181, in build
+    raise ValueError('No valid recipes found for input: {}'.format(recipe_paths_or_metadata))
+ValueError: No valid recipes found for input: ['/home/ericdill/dev/conda-forge/feedstocks/feedstocks/err']

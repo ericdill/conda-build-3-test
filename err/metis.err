@@ -1,0 +1,12 @@
+recipe_path: /home/ericdill/dev/conda-forge/feedstocks/feedstocks/metis/recipeTraceback (most recent call last):
+  File "build-feedstocks.py", line 39, in build
+    api.build(recipe_path)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/api.py", line 183, in build
+    need_source_download=need_source_download, config=config, variants=variants)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/build.py", line 1615, in build_tree
+    built_packages=built_packages,
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/build.py", line 959, in build
+    warn_on_use_of_SRC_DIR(m)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/build.py", line 1247, in warn_on_use_of_SRC_DIR
+    raise ValueError("In conda-build 2.1+, the work dir is removed by default before the "
+ValueError: In conda-build 2.1+, the work dir is removed by default before the test scripts run.  You are using the SRC_DIR variable in your test script, but these files have been deleted.  Please see the  documentation regarding the test/source_files meta.yaml section, or pass the --no-remove-work-dir flag.

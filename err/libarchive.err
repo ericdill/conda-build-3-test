@@ -1,0 +1,16 @@
+recipe_path: /home/ericdill/dev/conda-forge/feedstocks/feedstocks/libarchive/recipeTraceback (most recent call last):
+  File "build-feedstocks.py", line 39, in build
+    api.build(recipe_path)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/api.py", line 183, in build
+    need_source_download=need_source_download, config=config, variants=variants)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/build.py", line 1615, in build_tree
+    built_packages=built_packages,
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/build.py", line 1072, in build
+    utils.check_call_env(cmd, env=env, cwd=src_dir)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/utils.py", line 670, in check_call_env
+    return _func_defaulting_env_to_os_environ(subprocess.check_call, *popenargs, **kwargs)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/utils.py", line 666, in _func_defaulting_env_to_os_environ
+    return func(_args, **kwargs)
+  File "/home/ericdill/miniconda/lib/python3.6/subprocess.py", line 291, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['/bin/bash', '-x', '-e', '/home/ericdill/miniconda/conda-bld/libarchive_1500280481446/work/conda_build.sh']' returned non-zero exit status 2.

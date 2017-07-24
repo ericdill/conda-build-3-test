@@ -1,0 +1,54 @@
+recipe_path: /home/ericdill/dev/conda-forge/feedstocks/feedstocks/mosfit/recipeTraceback (most recent call last):
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda/core/link.py", line 326, in _execute_actions
+    action.execute()
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda/core/path_actions.py", line 290, in execute
+    super(PrefixReplaceLinkAction, self).execute()
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda/core/path_actions.py", line 245, in execute
+    force=context.force)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda/gateways/disk/create.py", line 266, in create_link
+    copy(src, dst)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda/gateways/disk/create.py", line 216, in copy
+    _do_copy(src, dst)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda/gateways/disk/create.py", line 221, in _do_copy
+    shutil_copy(src, dst)
+  File "/home/ericdill/miniconda/lib/python3.6/shutil.py", line 242, in copy
+    copymode(src, dst, follow_symlinks=follow_symlinks)
+  File "/home/ericdill/miniconda/lib/python3.6/shutil.py", line 143, in copymode
+    st = stat_func(src)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda/__init__.py", line 107, in conda_signal_handler
+    raise CondaSignalInterrupt(signum)
+conda.exceptions.CondaSignalInterrupt: Signal interrupt SIGINT
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda/core/link.py", line 281, in execute
+    pkg_data, actions)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda/core/link.py", line 344, in _execute_actions
+    reverse_excs,
+conda.CondaMultiError: Signal interrupt SIGINT
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "build-feedstocks.py", line 39, in build
+    api.build(recipe_path)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/api.py", line 183, in build
+    need_source_download=need_source_download, config=config, variants=variants)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/build.py", line 1615, in build_tree
+    built_packages=built_packages,
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/build.py", line 955, in build
+    always_include_files=m.always_include_files())
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda_build/environ.py", line 808, in create_env
+    execute_actions(actions, index, verbose=config.debug)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda/plan.py", line 830, in execute_actions
+    execute_instructions(plan, index, verbose)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda/instructions.py", line 247, in execute_instructions
+    cmd(state, arg)
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda/instructions.py", line 108, in UNLINKLINKTRANSACTION_CMD
+    txn.execute()
+  File "/home/ericdill/miniconda/lib/python3.6/site-packages/conda/core/link.py", line 297, in execute
+    rollback_excs,
+conda.CondaMultiError: Signal interrupt SIGINT
+
